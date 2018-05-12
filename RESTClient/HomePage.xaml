@@ -1,0 +1,19 @@
+﻿<Page
+    x:Class="RESTClient.HomePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:RESTClient"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <RelativePanel>
+        <TextBox x:Name="URLBox" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="401" PlaceholderText="Enter URL" InputScope="Url"/>
+        <ComboBox x:Name="requestTypeCombo" RelativePanel.RightOf="URLBox" Margin="30,0,0,0" PlaceholderText="Request type" RelativePanel.AlignTopWith="URLBox" SelectedIndex="0" Width="120">
+            <x:String>GET</x:String>
+            <x:String>POST</x:String>
+        </ComboBox>
+        <Button x:Name="sendRequestBtn" Content="Send Request" RelativePanel.RightOf="requestTypeCombo" Margin="30,0,0,0" RelativePanel.AlignTopWith="URLBox" Width="120"/>
+    </RelativePanel>
+</Page>
